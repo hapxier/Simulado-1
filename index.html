@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Simulador 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="img/ico.png">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Trabajo de oficina</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col div-pricipal">
+                <h4><i class="fas fa-edit"></i> Entradas</h4>
+                <hr>
+                <table class="table table-light">
+                    <tr>
+                        <td>Número de técnicos:</td>
+                        <td><input type="number" id="n_tecnicos"></td>
+                    </tr>
+                    <tr>
+                        <td>Horas de jornada:</td>
+                        <td><input type="number" id="horas_jornada"></td>
+                    </tr>
+                    <tr>
+                        <td>Número de órdenes:</td>
+                        <td><input type="number" id="n_ordenes"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding-top: 20px">
+                            <button type="button" class="btn btn-primary" id="btn-calcular" onclick="calcularUtilizacion()">Calcular utilización</button>
+                            <button type="button" class="btn btn-secondary" onclick="reiniciar()" id="btn-r">Reiniciar</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col div-pricipal">
+                <h4><i class="fas fa-memory"> </i> Estados</h4>
+                <hr>
+                <table class="table table-light">
+                    <tr>
+                        <td>Órdenes ordinarias (%):</td>
+                        <td><input type="number" id="n_ordinarias" value="70" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Duración o. ordinaria (hrs):</td>
+                        <td><input type="number" id="dur_ordinarias" value="2" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Órdenes prioritarias (%):</td>
+                        <td><input type="number" id="n_prioritarias" value="30" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Duración o. prioritarias (hrs):</td>
+                        <td><input type="number" id="dur_prioritarias" value="4" disabled></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button type="button" class="btn btn-danger" onclick="cambiarDuracion()" id="btn-cambiar-dur">Cambiar</button>
+                            <button type="button" class="btn btn-success" onclick="guardarDuracion()" id="btn-guardar-dur" disabled>Establecer</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="col div-pricipal" id="div">
+            <h4><i class="fas fa-desktop"></i></i> Salida</h4>
+            <hr>
+            <label id="lbl-OO"></label><br>
+            <label id="lbl-OP"></label><br>
+            <label id="lbl-PU"></label><br>
+            <label id="lbl-sobrante"></label>
+            <label id="lbl-HE"></label><br>
+            <label id="lbl-TE"></label><br>
+            <label id="lbl-ME"></label>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <h6>Cristian Umanzor 20141003495 - Luis Salgado 20131005000</h6>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!--JS-->
+    <script src="js/controlador.js"></script>
+</body>
+
+</html>
